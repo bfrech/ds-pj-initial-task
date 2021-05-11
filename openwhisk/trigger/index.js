@@ -1,18 +1,19 @@
 function action(params) {
     const axios = require('axios');
 
-    time = Math.floor(Date.now() / 1000)
-
+    now = new Date()
+   
     var config = {
          method: 'get',
-         url: 'https://showcase.api.linx.twenty57.net/UnixTime/fromunix?timestamp=' + time,
+         url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
         headers: { }
     };
 
     return new Promise(function(resolve, reject){
         axios(config)
         .then(function (response) {
-            resolve ({ msg: response.data});
+            result = response.data['bpi']['EUR']['rate']
+            resolve ({ current_rate_EUR: result, timestamp: now});
         })
         .catch(function (error) {
             reject(error)
