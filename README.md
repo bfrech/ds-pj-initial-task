@@ -39,3 +39,10 @@ To see the last few activations run ``` wsk -i activation list --limit 5```
 Get result with ```wsk -i activation result <Activation ID>```
 
 To stop the trigger run ``` wsk -i trigger delete five-mins-trigger ```
+
+
+## OpenFaas
+#### Prerequisites
+Docker, kubectl and k3d installed. 
+
+OpenFaas 
