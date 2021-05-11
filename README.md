@@ -5,6 +5,9 @@ OpenWhisk and TinyFaas tasks for PJ-DS 2021.
 ## OpenWhisk
 The openwhisk directory contains the cluster setup and two directories with actions. 
 
+#### Prerequisites
+Docker, kubectl installed and openwhisk deployed on Kubernetes cluster (https://github.com/apache/openwhisk-deploy-kube/blob/master/README.md)
+
 #### Hash Function
 The Hash action takes the parameter course as input and returns the MD5 Hash of the concatenated string *course* + Berit.
 In openwhisk/hash-function directory run:
