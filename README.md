@@ -31,13 +31,8 @@ This code generates a trigger that fires every 5 minutes and invokes trigger-act
     wsk -i trigger create five-mins-trigger --feed /whisk.system/alarms/interval --param minutes 5
     wsk -i rule create rule1 five-mins-trigger trigger-action
 ```
-To see the last few activations run: 
-```bash
-    wsk -i activation list --limit 5
-```
+To see the last few activations run ``` wsk -i activation list --limit 5```
+
 Get result with ```wsk -i activation result <Activation ID>```
 
-To stop the trigger run:
-```bash
-    wsk -i trigger delete five-mins-trigger
-```
+To stop the trigger run ``` wsk -i trigger delete five-mins-trigger ```
