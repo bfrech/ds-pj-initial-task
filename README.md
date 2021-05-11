@@ -49,4 +49,26 @@ OpenFaas gateway:
     kubectl port-forward svc/gateway -n openfaas 8080:8080
 ```
 
-#### 
+#### Public-IP
+This function uses https://api.ipify.org/?format=json to get the public IP address.
+```bash
+    echo "" | faas-cli invoke public-ip
+```
+
+#### Location
+This function returns the location of a public IP address from https://ipinfo.io/92.212.2.145/geo
+```bash
+    echo <IP-Address> | faas-cli invoke location
+```
+
+#### Where am I?
+This function first retrieves the public IP address with the public-ip function and then directly retains the location by calling the location function. 
+```bash
+    echo "" | faas-cli invoke whereami
+```
+
+#### Is there still a curfew?
+This function uses ... to get the corona cases of Berlin during the last 5 days and checks whether the weekly incidence was above 100 on any day.
+```bash
+    echo "" | faas-cli invoke is-there-still-a-curfew
+```
