@@ -20,7 +20,7 @@ wsk -i action invoke --result hash-function --param course DS-PJ
 ```
 
 #### Trigger Function
-The trigger action queries the ... API and returns the ... with the current timestamp. To create and invoke the action go to openwhisk/trigger directory and run:
+The trigger action queries the https://api.coindesk.com/v1/bpi/currentprice.json API and returns the current Bitcoin rate in EUR and the current timestamp. To create and invoke the action go to openwhisk/trigger directory and run:
 ```bash
 npm install
 zip -r trigger *
