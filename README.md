@@ -43,6 +43,10 @@ To stop the trigger run ``` wsk -i trigger delete five-mins-trigger ```
 
 ## OpenFaas
 #### Prerequisites
-Docker, kubectl and k3d installed. 
+Docker, kubectl and k3d installed and OpenFaas deployed on Kubernetes cluster. 
+OpenFaas gateway:
+```bash
+    kubectl port-forward svc/gateway -n openfaas 8080:8080
+```
 
-OpenFaas 
+#### 
