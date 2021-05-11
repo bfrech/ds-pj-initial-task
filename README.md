@@ -68,7 +68,7 @@ This function first retrieves the public IP address with the public-ip function 
 ```
 
 #### Is there still a curfew?
-This function uses ... to get the corona cases of Berlin during the last 5 days and checks whether the weekly incidence was above 100 on any day.
+This function uses https://api.corona-zahlen.org/states/BE/history/incidence/5 to get the corona cases of Berlin during the last 5 days and checks whether the weekly incidence was above 100 on any day.
 ```bash
     echo "" | faas-cli invoke is-there-still-a-curfew
 ```
