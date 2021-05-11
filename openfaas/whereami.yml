@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  whereami:
+    lang: python3
+    handler: ./whereami
+    image: bfrech1888/whereami:latest
+    environment: 
+      combine_output: false
+

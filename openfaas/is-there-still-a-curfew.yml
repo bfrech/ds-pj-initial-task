@@ -1,0 +1,12 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  is-there-still-a-curfew:
+    lang: python3
+    handler: ./is-there-still-a-curfew
+    image: bfrech1888/is-there-still-a-curfew:latest
+    environment:
+      combine_output: false
+

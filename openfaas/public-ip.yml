@@ -1,0 +1,10 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  public-ip:
+    lang: python3
+    handler: ./public-ip
+    image: bfrech1888/public-ip:latest
+
