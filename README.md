@@ -56,7 +56,7 @@ This function uses https://api.ipify.org/?format=json to get the public IP addre
 ```
 
 #### Location
-This function returns the location of a public IP address from https://ipinfo.io/92.212.2.145/geo
+This function returns the location of a public IP address from https://ipinfo.io
 ```bash
     echo <IP-Address> | faas-cli invoke location
 ```
